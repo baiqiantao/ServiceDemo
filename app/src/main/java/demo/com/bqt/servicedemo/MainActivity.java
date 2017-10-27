@@ -37,7 +37,8 @@ public class MainActivity extends ListActivity {
 				"5、bindService方式开启服务 ", //
 				"6、unbindService方式解除绑定服务",//
 				"7、startService启动服务后再bindService",//
-				"8、通过IBinder间接调用服务中的方法"};
+				"8、通过IBinder间接调用服务中的方法",//
+				"9、启动AIDLActivity"};
 		setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<String>(Arrays.asList(array))));
 	}
 	
@@ -87,6 +88,9 @@ public class MainActivity extends ListActivity {
 			case 8:
 				if (mIBinder != null) mIBinder.callMethodInService(new Random().nextInt(3));
 				else Toast.makeText(this, "还没有绑定服务呦……", Toast.LENGTH_SHORT).show();
+				break;
+			case 9:
+				startActivity(new Intent(this, AIDLActivity.class));
 				break;
 		}
 	}
