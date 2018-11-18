@@ -1,6 +1,7 @@
 # Built application files
 *.apk
 *.ap_
+.idea/
 
 # Files for the ART/Dalvik VM
 *.dex
@@ -53,3 +54,6 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+/gradlew
+/gradlew.bat
+/.idea
